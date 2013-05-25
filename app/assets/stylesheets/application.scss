@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+$shadow-color: #ccc;
+$table-border-color: #999;
+$table-header-bgcolor: #666;
+
+html, body, div, span, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, summary,
+time, mark, audio, video, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+} 
+
+
+@media screen and (max-width: 1280px){
+  body { 
+    font-size: 0.8em;
+  }
+  h1 {font-size: 2em}
+}
+@media screen and (max-width: 700px){
+  body {
+    font-size: 0.8em;
+  }
+  h1 {font-size: 1.4em}
+  a {
+    font-size: 1.1em;
+    display: block;
+    padding: 4px;
+  }
+}
+
+/* TABLE STYLES */
+table {
+  border-color: $table-border-color;
+  border-spacing: 0px;
+  border-style: solid;
+  border-width: 1px;
+  cell-spacing: 0px;
+  border-radius: 5px;
+}
+
+td, th {
+  padding: 2px 0.5em;
+  vertical-align: top;
+}
+
+td.numeric {
+  text-align: right;
+}
+
+th {
+  text-align: left;
+  background-color: $table-header-bgcolor;
+  padding: 15px 15px 15px 5px;
+  color: #FFF;
+  &:visited { color: #FFF; }
+  &:active {}
+  &:hover { 
+    color: #FFF; 
+    text-decoration: underline; 
+    background-color: #000;
+  }
+
+}	
+
+th.mainHeader {
+  background-color: #808080;
+  color: #FFF;
+  text-align: left;
+}
+
+th.table-sorted-desc {
+  background-color: #000;
+  color: #FFF;
+}
+
+th.table-sorted-asc {
+  background-color: #999;
+  color: #FFF;
+}
+
+th a {
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+  &:visited { color: #FFF; }
+  &:active {}
+  &:hover { color: #FFF; text-decoration: underline; }
+}
+
+tr {
+  &:visited { color: #000; }
+  &:active {}
+  &:hover { 
+    color: #FFF; 
+    background-color: #999;
+    a { color: #FFF; }
+  }
+}
+tr.alternateRow {
+  background-color: #ccc;
+  &:visited { color: #000; }
+  &:active {}
+  &:hover { 
+    color: #FFF; 
+    background-color: #777; 
+    a { color: #FFF; } 
+  }
+}
+
+td.sortedColumn {
+  background-color: #f0f0f0;
+}
+
+th.sortedColumn {
+  background-color: #b0b0b0;
+}
+
+tr.alternateRow td.sortedColumn {
+  background-color: #d0d0d0;
+}

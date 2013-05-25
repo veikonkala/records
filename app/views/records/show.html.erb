@@ -1,0 +1,60 @@
+<div class="main-container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Artist:</b>
+  <%= @record.artist %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @record.name %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @record.genre %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @record.year %>
+</p>
+
+<p>
+  <b>Inc:</b>
+  <%= @record.inc %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @record.label %>
+</p>
+
+<p>
+  <b>Discogs id:</b>
+  <%= @record.discogs_id %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @record.rating %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @record.comments %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%= @record.created_at %><br/>
+  Updated: <%= @record.updated_at %>
+</p>
+
+<div class="action-container">
+<div class="action-button"><%= link_to 'Edit', edit_record_path(@record) %></div>
+<div class="action-button"><%= link_to 'Back', records_path %></div>
+</div>
+
+</div>

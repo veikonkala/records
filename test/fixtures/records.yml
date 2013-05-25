@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  artist: MyString
+  name: MyString
+  genre: MyString
+  year: 1
+  inc: 1
+  label: MyString
+  added: 2012-01-05
+
+two:
+  artist: MyString
+  name: MyString
+  genre: MyString
+  year: 1
+  inc: 1
+  label: MyString
+  added: 2012-01-05

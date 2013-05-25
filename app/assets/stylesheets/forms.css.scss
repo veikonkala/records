@@ -1,0 +1,63 @@
+$shadow-color: #ccc;
+$input-font-size: 1.3em;
+
+fieldset {
+}
+
+legend {
+}
+
+label {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+input {
+  font-size: $input-font-size;
+  padding: 2px 2px;
+  border: solid 1px #aacfe4;
+  margin: 2px 0 10px 10px;
+  width: 95%;
+}
+
+textarea {
+  font-size: $input-font-size;
+  padding: 2px 2px;
+  border:solid 1px #aacfe4;
+  width: 95%;
+  margin:2px 0 10px 10px;
+}
+
+select {
+  font-size: $input-font-size;
+  padding: 2px 2px;
+  border: solid 1px #aacfe4;
+  margin: 2px 0 10px 10px;
+}
+
+input[type="submit"]{
+  -moz-box-shadow: 4px 4px 4px 0px $shadow-color;
+  -webkit-box-shadow: 4px 4px 4px 0px $shadow-color;
+  box-shadow: 4px 4px 4px 0px $shadow-color;
+  border-top: 1px solid #ffffff;
+  background: #666666;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  width: 50%;
+  &:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+  }
+  &:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+  }
+}
