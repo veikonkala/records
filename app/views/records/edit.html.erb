@@ -1,11 +1,15 @@
 <div class="main-container">
-<h1>Editing record</h1>
+  <h1>Editing record</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<div class="action-container">
-<div class="action-button"><%= link_to 'Show', @record %></div>
-<div class="action-button"><%= link_to 'Back', records_path %></div>
-</div>
+  <div class="action-container">
+    <div class="action-button">
+      <%= link_to 'Show', @record %>
+    </div>
+    <div class="action-button">
+      <%= link_to 'Back', records_path %>
+    </div>
+  </div>
 
 </div>
