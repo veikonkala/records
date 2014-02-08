@@ -25,7 +25,11 @@
         <td><%= record.year %></td>
         <td><%= record.inc %></td>
         <td style="word-break: break-word;"><%= record.label %></td>
-        <td><a href="/records/<%= record.id %>" class="table-button">Show</a><a href="/records/<%= record.id %>/edit" class="table-button">Edit</a><a href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow" class="table-button">Del</a></td>
+        <td>
+            <a class="btn-show" href="/records/<%= record.id %>" class="table-button">Show</a>
+            <a class="btn-edit" href="/records/<%= record.id %>/edit" class="table-button">Edit</a>
+            <a class="btn-delete" href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow" class="table-button">Del</a>
+        </td>
       </tr>
       <% end %>
     </tbody>
