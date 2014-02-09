@@ -6,34 +6,28 @@ $margin: 16px;
 $shadow-color: #cccccc;
 
 .main-container {
-  -moz-box-shadow: 4px 4px 4px 0px $shadow-color;
-  -webkit-box-shadow: 4px 4px 4px 0px $shadow-color;
-  box-shadow: 4px 4px 4px 0px $shadow-color;
-  background: #e3e3e3;
+  background: #fff;
   margin: $margin / 2;
   padding: $margin;
-  border-color: #999;
+  border-color: #aacfe4;
   border-spacing: 5px;
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
   border-radius: 5px;
   display: block;
-  padding: 5px;
+  padding: 1em;
 }
 
 .action-container {
   display: block;
-  padding: 10px;
+  padding: 1em;
 }
 
 .action-button {
-  -moz-box-shadow: 4px 4px 4px 0px $shadow-color;
-  -webkit-box-shadow: 4px 4px 4px 0px $shadow-color;
-  box-shadow: 4px 4px 4px 0px $shadow-color;  
   border-top: 1px solid #ffffff;
-  background: #666666;
-  padding: 8px 16px;
-  border-radius: 8px;
+  background: #4c6696;
+  padding: 1em 1em;
+  border-radius: 4px;
   color: white;
   font-size: 1.2em;
   text-decoration: none;
@@ -41,8 +35,8 @@ $shadow-color: #cccccc;
   display: inline-block;
   &:hover {
     border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
+    background: #2f4369;
+    color: #fff;
   }
   &:active {
     border-top-color: #1b435e;

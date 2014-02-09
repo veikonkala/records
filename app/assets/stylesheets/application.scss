@@ -6,9 +6,8 @@
  *= require_tree . 
 */
 
-$shadow-color: #ccc;
-$table-border-color: #999;
-$table-header-bgcolor: #666;
+$light-blue: #e4ebf3;
+$hover-light-blue: #c2d7ee;
 
 html, body, div, span, object, iframe,
 h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,7 +22,7 @@ article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, summary,
 time, mark, audio, video, section {
   margin:0;
-  padding:0;
+  padding:0.25em;
   border:0;
   outline:0;
   font-size:100%;
@@ -31,13 +30,13 @@ time, mark, audio, video, section {
   background:transparent;
 } 
 
-
 @media screen and (max-width: 1280px){
   body { 
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   h1 {font-size: 2em}
 }
+
 @media screen and (max-width: 700px){
   body {
     font-size: 0.8em;
@@ -52,16 +51,18 @@ time, mark, audio, video, section {
 
 /* TABLE STYLES */
 table {
-  border-color: $table-border-color;
-  border-spacing: 0px;
-  border-style: solid;
-  border-width: 1px;
   cell-spacing: 0px;
-  border-radius: 5px;
+  padding: 0px;
+  border-collapse:collapse;
+  border: 1px solid #e4ebf3;
+}
+
+td{
+  border-right: 1px solid #e4ebf3;
 }
 
 td, th {
-  padding: 2px 0.5em;
+  padding: 0.25em 0.5em;
   vertical-align: top;
 }
 
@@ -71,15 +72,17 @@ td.numeric {
 
 th {
   text-align: left;
-  background-color: $table-header-bgcolor;
-  padding: 15px 15px 15px 5px;
+  background-color: #4c6696;
+  padding: 1.25em 1em 1.25em 1em;
   color: #FFF;
+  font-size: 1em;
+
   &:visited { color: #FFF; }
   &:active {}
   &:hover { 
     color: #FFF; 
-    text-decoration: underline; 
-    background-color: #000;
+    cursor: pointer;
+    background-color: #2f4369;
   }
 
 }	
@@ -91,40 +94,31 @@ th.mainHeader {
 }
 
 th.table-sorted-desc {
-  background-color: #000;
+  background-color: #374d85;
   color: #FFF;
 }
 
 th.table-sorted-asc {
-  background-color: #999;
+  background-color: #9aa0ce;
   color: #FFF;
 }
 
-th a {
-  color: #FFF;
-  text-decoration: none;
-  display: inline-block;
-  &:visited { color: #FFF; }
-  &:active {}
-  &:hover { color: #FFF; text-decoration: underline; }
-}
 
 tr {
   &:visited { color: #000; }
   &:active {}
   &:hover { 
-    color: #FFF; 
-    background-color: #999;
+    background-color: $hover-light-blue;
     a { color: #FFF; }
   }
 }
+
 tr.alternateRow {
-  background-color: #ccc;
+  background-color: $light-blue;
   &:visited { color: #000; }
   &:active {}
   &:hover { 
-    color: #FFF; 
-    background-color: #777; 
+    background-color: $hover-light-blue; 
     a { color: #FFF; } 
   }
 }

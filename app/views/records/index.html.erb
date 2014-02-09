@@ -1,43 +1,43 @@
-<header>
+<div class="main-container">
   <h1>Listing <%= @total %> records</h1>
-</header>
 
-<section id="unseen">
-  <table class="table-autosort table-stripeclass:alternateRow">
-    <thead>
-      <tr>
-        <th class="table-sortable:alphanumeric table-filterable">Artist</th>
-        <th class="table-sortable:alphanumeric">Name</th>
-        <th class="table-sortable:alphanumeric">Genre</th>
-        <th class="table-sortable:numeric">Year</th>
-        <th class="table-sortable:numeric">"</th>
-        <th class="table-sortable:alphanumeric">Label</th>
-        <th></th>
-      </tr>
-    </thead>
+  <section id="unseen">
+    <table class="table-autosort table-stripeclass:alternateRow">
+      <thead>
+        <tr>
+          <th class="table-sortable:alphanumeric table-filterable">Artist</th>
+          <th class="table-sortable:alphanumeric">Name</th>
+          <th class="table-sortable:alphanumeric">Genre</th>
+          <th class="table-sortable:numeric">Year</th>
+          <th class="table-sortable:numeric">"</th>
+          <th class="table-sortable:alphanumeric">Label</th>
+          <th></th>
+        </tr>
+      </thead>
 
-    <tbody id="offTblBdy">
-      <% @records.each do |record| %>
-      <tr class="<%= cycle("alternateRow", "") %>">
-        <td style="word-break: break-word;"><%= record.artist %></td>
-        <td style="word-break: break-word;"><%= record.name %></td>
-        <td style="word-break: break-word;"><%= record.genre %></td>
-        <td><%= record.year %></td>
-        <td><%= record.inc %></td>
-        <td style="word-break: break-word;"><%= record.label %></td>
-        <td>
-            <a class="btn-show" href="/records/<%= record.id %>" class="table-button">Show</a>
-            <a class="btn-edit" href="/records/<%= record.id %>/edit" class="table-button">Edit</a>
-            <a class="btn-delete" href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow" class="table-button">Del</a>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-</section>
-<div class="action-container">
-  <div class="action-button">
-    <%= link_to 'New Record', new_record_path %>
+      <tbody id="offTblBdy">
+        <% @records.each do |record| %>
+        <tr class="<%= cycle("alternateRow", "") %>">
+          <td style="word-break: break-word;"><a href="/records/<%= record.id %>"><%= record.artist %></a></td>
+          <td style="word-break: break-word;"><a href="/records/<%= record.id %>"><%= record.name %></a></td>
+          <td style="word-break: break-word;"><a href="/records/<%= record.id %>"><%= record.genre %></a></td>
+          <td><a href="/records/<%= record.id %>"><%= record.year %></a></td>
+          <td><a href="/records/<%= record.id %>"><%= record.inc %></a></td>
+          <td style="word-break: break-word;"><a href="/records/<%= record.id %>"><%= record.label %></a></td>
+          <td>
+              <a href="/records/<%= record.id %>/edit" class="btn-edit">Edit</a>
+              <a href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow" class="btn-delete">Del</a>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="action-container">
+    <div class="action-button">
+      <%= link_to 'New Record', new_record_path %>
+    </div>
   </div>
-</div>
 
+</div>
