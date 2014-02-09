@@ -1,5 +1,5 @@
 <div class="main-container">
-  <h1>Listing <%= @total %> records</h1>
+  <h1><%= @total %> records in catalog</h1>
   <div class="action-button">
     <span class="fi-plus size-24">&nbsp;&nbsp;<%= link_to 'Add new record', new_record_path %></span>
   </div>
@@ -27,9 +27,9 @@
           <td><a href="/records/<%= record.id %>"><%= record.year %></a></td>
           <td><a href="/records/<%= record.id %>"><%= record.inc %></a></td>
           <td style="word-break: break-word;"><a href="/records/<%= record.id %>"><%= record.label %></a></td>
-          <td>
-              <span class="fi-wrench size-12">&nbsp;<a href="/records/<%= record.id %>/edit">Edit</a></span>
-              <span class="fi-x size-12">&nbsp;<a href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow" class="btn-delete">Del</a></span>
+          <td nowrap>
+              <span class="action-link"><a href="/records/<%= record.id %>/edit"><i class="fi-wrench size-24"></i></a></span>
+              <span class="action-link"><a href="/records/<%= record.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow"><i class="fi-x size-24"></i></a></span>
           </td>
         </tr>
         <% end %>

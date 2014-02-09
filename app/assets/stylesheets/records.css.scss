@@ -3,20 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $blue: #4c6696;
-$margin: 16px;
 $shadow-color: #cccccc;
 
 .main-container {
   background: #fff;
-  margin: $margin / 2;
-  padding: $margin;
-  border-color: #aacfe4;
-  border-spacing: 5px;
-  border-style: none;
-  border-width: 1px;
-  border-radius: 5px;
   display: block;
-  padding: 1em;
+  padding: 0.2em;
 }
 
 .action-container {

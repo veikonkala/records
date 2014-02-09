@@ -1,27 +1,14 @@
+$blue: #4c6696;
+
 body {
   background-color: #FFF;
-
-  font-size: 100%;
+  margin: 0;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-
-  @media screen and (max-width: 1280px){
-    font-size: 0.9em;
-    h1 {
-      font-size: 2em;
-    }
-  }
-
+  font-size: 0.9em;
+  
   @media screen and (max-width: 700px){
     font-size: 0.8em;
-    h1 {
-      font-size: 1.4em;
-    }
-    a {
-     font-size: 1.1em;
-      display: block;
-      padding: 4px;
-    }
   }
 }
 
@@ -37,17 +24,15 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, summary,
 time, mark, audio, video, section {
-  margin: 0;
-  padding: 0.25em;
-  border: 0;
+  padding: 0em;
+  margin: 0.1em;
   outline: 0;
-  
   vertical-align: baseline;
   background: transparent;
 } 
 
 p, ol, ul, td {
-  line-height: 18px; 
+  line-height: 1.4em; 
 }
 
 pre {
@@ -65,5 +50,27 @@ a {
   &:hover {
     color: #000;
     text-decoration: underline;
+  }
+}
+
+.action-link {
+  font-size: 1.2em;
+
+  padding-top: 0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  padding-bottom: 0.1em;
+
+  i:hover {
+    color: $blue;
+  }
+
+  @media screen and (max-width: 700px){
+    font-size: 1.4em;
+    
+    padding-top: 0.6em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-bottom: 0.6em;
   }
 }
