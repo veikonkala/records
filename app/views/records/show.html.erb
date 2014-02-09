@@ -1,4 +1,6 @@
 <div class="main-container">
+  <h1 class="fi-magnifying-glass size-24"> Record details</h1>
+
   <p id="notice">
     <%= notice %>
   </p>
@@ -51,16 +53,18 @@
   <p>
     <b>Created:</b>
     <%= @record.created_at %>
-    <br/>
-    Updated: <%= @record.updated_at %>
+  </p>
+  <p>
+    <b>Updated:</b>
+    <%= @record.updated_at %>
   </p>
 
   <div class="action-container">
     <div class="action-button">
-      <%= link_to 'Edit', edit_record_path(@record) %>
+      <span class="fi-wrench size-24">&nbsp;&nbsp;<%= link_to 'Edit', edit_record_path(@record) %></span>
     </div>
     <div class="action-button">
-      <%= link_to 'Back', records_path %>
+      <span class="fi-arrow-left size-24">&nbsp;&nbsp;<%= link_to 'Back to list', records_path %></span>
     </div>
   </div>
 

@@ -1,0 +1,69 @@
+body {
+  background-color: #FFF;
+
+  font-size: 100%;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+
+  @media screen and (max-width: 1280px){
+    font-size: 0.9em;
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 700px){
+    font-size: 0.8em;
+    h1 {
+      font-size: 1.4em;
+    }
+    a {
+     font-size: 1.1em;
+      display: block;
+      padding: 4px;
+    }
+  }
+}
+
+html, body, div, span, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, summary,
+time, mark, audio, video, section {
+  margin: 0;
+  padding: 0.25em;
+  border: 0;
+  outline: 0;
+  
+  vertical-align: baseline;
+  background: transparent;
+} 
+
+p, ol, ul, td {
+  line-height: 18px; 
+}
+
+pre {
+  background-color: #eee;
+  padding: 1em;
+  font-size: 1em; 
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:visited {
+    color: #000; 
+  }
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}

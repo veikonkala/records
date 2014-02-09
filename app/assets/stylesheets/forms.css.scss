@@ -1,4 +1,4 @@
-$shadow-color: #ccc;
+$blue: #4c6696;
 $input-font-size: 1.3em;
 $btn-color: #ccc;
 
@@ -39,23 +39,20 @@ select {
 }
 
 input[type="submit"]{
-  border-top: 1px solid #ffffff;
-  background: #4c6696;
-  padding: 1em 1em;
+  background: $blue;
+  padding: 0.7em 0.7em;
   border-radius: 4px;
-  color: white;
+  color: #FFF;
   font-size: 1.2em;
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
-  width: 50%;
+  width: auto;
   &:hover {
-    border-top-color: #28597a;
-    background: #2f4369;
-    color: #ccc;
+    background: darken($blue, 20%);
+    cursor: pointer;
   }
   &:active {
-    border-top-color: #1b435e;
-    background: #1b435e;
+    background: lighten($blue, 20%);
   }
 }

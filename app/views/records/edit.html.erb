@@ -1,14 +1,14 @@
 <div class="main-container">
-  <h1>Editing record</h1>
+  <h1 class="fi-wrench size-24"> Editing record</h1>
 
   <%= render 'form' %>
 
   <div class="action-container">
     <div class="action-button">
-      <%= link_to 'Show', @record %>
+      <span class="fi-magnifying-glass size-24">&nbsp;<%= link_to 'Show', @record %></span>
     </div>
     <div class="action-button">
-      <%= link_to 'Back', records_path %>
+      <span class="fi-arrow-left size-24">&nbsp;<%= link_to 'Back to list', records_path %></span>
     </div>
   </div>
 

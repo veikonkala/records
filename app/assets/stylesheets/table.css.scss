@@ -1,0 +1,69 @@
+/* TABLE STYLES */
+
+$blue: #4c6696;
+
+table {
+  cell-spacing: 0px;
+  padding: 0px;
+  border-collapse:collapse;
+  border: 1px solid #e4ebf3;
+}
+
+td {
+  border-right: 1px solid #e4ebf3;
+}
+
+td, th {
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+}
+
+td.numeric {
+  text-align: right;
+}
+
+th {
+  text-align: left;
+  background-color: $blue;
+  padding: 1.25em 1em 1.25em 1em;
+  color: #FFF;
+  font-size: 1em;
+
+  &:hover { 
+    cursor: pointer;
+    background-color: darken($blue, 20%);
+  }
+}	
+
+th.mainHeader {
+  background-color: #808080;
+  color: #FFF;
+  text-align: left;
+}
+
+th.table-sorted-desc {
+  background-color: lighten($blue, 15%);
+}
+
+th.table-sorted-asc {
+  background-color: darken($blue, 15%);
+}
+
+tr {
+  &:hover { 
+    background-color: lighten($blue, 30%);
+    a { 
+      color: #FFF; 
+    }
+  }
+}
+
+tr.alternateRow {
+  background-color: lighten($blue, 40%);
+  &:hover { 
+    background-color: lighten($blue, 30%); 
+    a { 
+      color: #FFF; 
+    } 
+  }
+}
